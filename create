@@ -1,0 +1,11 @@
+git init ngit
+cd ngit
+git remote add NEW-REMOTE  ssh://git@github.com/softsysnet/ngit
+curl -H "Authorization: token 93520f4cc6a9efd95e8831d7567650f2bcf86cce"  https://api.github.com/user/repos -d '{"name": "ngit"}'
+who > scripter.sh
+git add .
+git commit -m "First virsion"
+git push  NEW-REMOTE --mirror
+cd ..
+rm -rf ngit
+git clone ssh://git@github.com/softsysnet/ngit
